@@ -1,0 +1,26 @@
+h2 {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(28px, 3vw, 42px); 
+    line-height: 1.1;                 
+    letter-spacing: -1.5px;           
+}
+
+.main-screen {
+    width: 400px;
+    height: 255px;
+    right: 52px;
+    top: 105px;
+    background: #bde8e0
+}
+
+.dots {
+  position: absolute;
+  top: 215px;
+  left: 20px;
+  width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  z-index: 4;
+}

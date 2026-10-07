@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap');
+
+:root {
+    --blue: #3c83aa;
+    --dark: #343748;
+    --muted: #a7adbb;
+    --yellow: #ffad22;
+    --page: #ccefea;
+    --line: #e4e7ec
+}
+
+
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--dark);
+    font-family: "DM Sans", sans-serif
+}
+
+button,
+input {
+    font: inherit
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.page {
+    min-height: 100vh;
+    padding: 45px 20px;
+    display: grid;
+    place-items: center
+}
+
+.shell {
+    width: min(1120px, 100%);
+    min-height: 690px;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(34, 92, 101, .18)
+}
+
+.form-panel {
+    padding: 0 68px;
+    background: #fff;
+    position: relative;
+    z-index: 3
+}
+
+.brand {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 20px
+}
+
+.brand-mark {
+    color: var(--yellow);
+    font-size: 29px
+}
+
+.form-area {
+    max-width: 410px;
+    padding-top: 70px
+}
+
+.eyebrow {
+    margin: 0 0 13px;
+    color: #8e95a5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px
+}
+
+h1 {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(42px, 4vw, 59px);
+    line-height: .98;
+    letter-spacing: -2.5px
+}
+
+.subtext {
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 20px 0 30px
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px
+}
+
+form>label,
+.pass-label label {
+    font-size: 13px;
+    font-weight: 700
+}
+
+.pass-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px
+}
+
+.pass-label a,
+.signup a {
+    color: var(--blue);
+    font-weight: 700
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    padding: 0 15px;
+    outline: 0;
+    color: var(--dark)
+}
+
+input::placeholder {
+    color: #b8bdc8
+}
+
+input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(60, 131, 170, .1)
+}
+
+.pass-wrap {
+    position: relative
+}
+
+.pass-wrap input {
+    padding-right: 65px
+}
+
+.show {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 12px;
+    color: #7f8594;
+    font-size: 13px
+}
+
+.remember input {
+    accent-color: var(--blue)
+}
+
+.login-btn {
+    height: 49px;
+    border: 0;
+    border-radius: 28px;
+    background: var(--yellow);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(255, 173, 34, .25)
+}
+
+.login-btn:hover {
+    transform: translateY(-1px)
+}
+
+.signup {
+    text-align: center;
+    margin-top: 24px;
+    color: #9ca2b0;
+    font-size: 13px
+}
+
+.visual-panel {
+    background: var(--blue);
+    overflow: hidden
+}
+
+.illustration {
+    height: 100%;
+    min-height: 690px;
+    position: relative;
+    overflow: hidden
+}
+
+.stripe {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: .36;
+    background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .8) 0 8px, transparent 8px 16px)
+}
+
+.s1 {
+    top: -48px;
+    left: -20px
+}
+
+.s2 {
+    right: -45px;
+    bottom: -45px
+}
+
+.visual-title {
+    position: absolute;
+    top: 75px;
+    left: 58px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 5
+}
+
+.visual-title i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #ffd16c
+}
+
+.dots {
+    position: absolute;
+    left: 60px;
+    top: 310px;
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    z-index: 5
+}
+
+.dots i {
+    width: 12px;
+    height: 12px;
+    background: #ffd16c;
+    border-radius: 50%
+}
+
+.ring {
+    position: absolute;
+    right: -20px;
+    top: 95px;
+    width: 110px;
+    height: 110px;
+    border: 27px solid #ff8551;
+    border-radius: 50%
+}
+
+.screen {
+    position: absolute;
+    border: 7px solid var(--dark);
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(28, 55, 69, .13)
+}
+
+.main-screen {
+    width: 315px;
+    height: 215px;
+    right: 52px;
+    top: 155px;
+    background: #bde8e0
+}
+
+.small-screen {
+    width: 245px;
+    height: 170px;
+    right: 112px;
+    top: 405px;
+    background: #72bb64
+}
+
+.person {
+    position: absolute;
+
+    inset: 0
+}
+
+.head {
+    position: absolute;
+    width: 75px;
+    height: 80px;
+    left: 50%;
+    top: 57px;
+    transform: translateX(-50%)
+}
+
+.hair {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 66px;
+    height: 44px;
+    border-radius: 50% 50% 35% 35%;
+    z-index: 2
+}
+
+.face {
+    position: absolute;
+    left: 9px;
+    top: 17px;
+    width: 59px;
+    height: 67px;
+    border-radius: 46%;
+    background: #ffc18c;
+    z-index: 1
+}
+
+.face i {
+    position: absolute;
+    top: 31px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--dark)
+}
+
+.face i:first-child {
+    left: 16px
+}
+
+.face i:nth-child(2) {
+    right: 16px
+}
+
+.face b {
+    position: absolute;
+    top: 42px;
+    left: 21px;
+    width: 17px;
+    height: 8px;
+    border-bottom: 3px solid #e86852;
+    border-radius: 50%
+}
+
+.shirt {
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    border-radius: 55px 55px 0 0
+}
+
+.small-screen .head {
+    top: 20px;
+    transform: translateX(-50%) scale(.78)
+}
+
+.small-screen .shirt {
+    transform: translateX(-50%) scale(.8)
+}
+
+.quote {
+    position: absolute;
+    left: 55px;
+    bottom: 48px;
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 65px;
+    line-height: .5;
+    z-index: 8
+}
+
+.quote p {
+    margin: 3px 0 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    line-height: 1.35
+}
+
+@media(max-width:900px) {
+    .page {
+        padding: 0
+    }
+
+    .shell {
+        min-height: 100vh;
+        grid-template-columns: 1fr
+    }
+
+    .form-panel {
+        padding: 0 35px 55px
+    }
+
+    .form-area {
+        padding-top: 35px;
+        margin: auto
+    }
+
+    .visual-panel {
+        min-height: 520px
+    }
+    .small-screen{
+      display: none;
+    }
+
+    .illustration {
+        min-height: 520px
+    }
+}
+
+@media(max-width:560px) {
+   
+  
+    .screen{
+      display: none;
+    }
+    .form-panel {
+        padding: 0 24px 45px
+    }
+
+    .brand {
+        height: 85px
+    }
+
+    h1 {
+        font-size: 42px
+    }
+
+    .visual-panel,
+    .illustration {
+        min-height: 450px
+    }
+
+    .visual-title {
+        left: 25px;
+        top: 55px
+    }
+
+    .main-screen {
+        width: 275px;
+        height: 190px;
+        right: -15px;
+        top: 105px
+    }
+
+    .small-screen {
+        width: 215px;
+        height: 150px;
+        right: 35px;
+        top: 315px
+    }
+
+    .dots {
+        left: 25px;
+        top: 265px
+    }
+
+    .quote {
+        left: 25px;
+        bottom: 25px
+    }
+
+    .quote p {
+        font-size: 15px
+    }
+}
